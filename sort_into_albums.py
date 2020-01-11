@@ -4,11 +4,6 @@ import os
 import glob
 import shutil
 
-list_of_files = glob.glob('*.json')
-for filename in list_of_files:
-   os.remove(filename)
-quit()
-
 with open('albums.json') as f:
   data = json.load(f)
   album_list = data.get('albums')
